@@ -91,6 +91,7 @@ func DefaultConfig() Config {
 		PlatformVariables:           platformVariables,
 		TaskMetadataSteadyStateRate: DefaultTaskMetadataSteadyStateRate,
 		TaskMetadataBurstRate:       DefaultTaskMetadataBurstRate,
+		ImagePullInactivityTimeout:  DefaultImagePullInactivityTimeout,
 	}
 }
 

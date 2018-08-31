@@ -218,4 +218,7 @@ type Config struct {
 
 	// TaskMetadataBurstRate specifies the burst rate throttle for the task metadata endpoint
 	TaskMetadataBurstRate int
+
+	// ImagePullInactivityTimeout is the amount of time we will wait when image pulling does not progress
+	ImagePullInactivityTimeout time.Duration
 }

@@ -104,6 +104,9 @@ const (
 
 	// DefaultTaskMetadataBurstRate is set to handle 60 burst requests at once
 	DefaultTaskMetadataBurstRate = 60
+
+	// DefaultImagePullInactivityTimeout is set to 1 minute
+	DefaultImagePullInactivityTimeout = 1 * time.Minute
 )
 
 const (
@@ -420,6 +423,7 @@ func environmentConfig() (Config, error) {
 		CgroupPath:                       os.Getenv("ECS_CGROUP_PATH"),
 		TaskMetadataSteadyStateRate:      steadyStateRate,
 		TaskMetadataBurstRate:            burstRate,
+		ImagePullInactivityTimeout:       parseEnvVariableDuration("ECS_IMAGE_PULL_INACTIVITY_TIMEOUT"),
 	}, err
 }
 

@@ -68,6 +68,7 @@ func DefaultConfig() Config {
 		CgroupPath:                  defaultCgroupPath,
 		TaskMetadataSteadyStateRate: DefaultTaskMetadataSteadyStateRate,
 		TaskMetadataBurstRate:       DefaultTaskMetadataBurstRate,
+		ImagePullInactivityTimeout:  DefaultImagePullInactivityTimeout,
 	}
 }
 
